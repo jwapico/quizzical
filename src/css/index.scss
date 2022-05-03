@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;600;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: #eff4ff;
+  
+  .start-screen {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #293264;
+
+    h1 {
+      font-weight: 600;
+      font-size: 40px;
+      margin-block-end: 0;
+    }
+
+    p {
+      margin-block-start: .5em;
+    }
+
+    button {
+      background-color: #4D5B9E;
+      color: #eff4ff;
+      padding: 1.3em 4.3em;
+      border: none;
+      border-radius: 13px;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-block-start: 1.3em;
+      font-family: "Karla", sans-serif;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        background-color: #6270b3;
+        color: white;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        background-color: #DEEBF8;
+        bottom: -100px;
+        left: -100px;
+        border-radius: 42% 58% 26% 74% / 24% 67% 33% 76%;
+        z-index: -1;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -150px;
+      background-color: #FFFAD1;
+      height: 400px;
+      width: 430px;
+      border-radius: 20% 80% 26% 74% / 0% 0% 100% 100%;
+      z-index: -1;
+    }
+  }
+
+  .question-screen {
+    display: flex;
+    flex-direction: column;
+    padding: 3.5em 7em;
+    color: #293264;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+
+    .question-screen-content {
+      margin: auto;
+
+      .question {
+        border-block-end: 1px solid #2932641a;
+        margin-block-end: 1.7em;
+        max-width: 900px;
+  
+        p {
+          margin-block: 0;
+          font-weight: 500;
+          font-size: 18px;
+        }
+        
+        .button-container {
+          margin-block-end: 1.7em;
+  
+          button {
+            margin-right: 1.5em;
+            background-color: transparent;
+            border: 1px solid currentColor;
+            border-radius: 10px;
+            padding: .3em 1.3em;
+            color: currentColor;
+            margin-block-start: 1.7em;
+            cursor: pointer;
+            transition: all .4s;
+
+            &:hover {
+              background-color: #e1e5f7;
+              border-color: transparent;
+            }
+
+            &.selected-answer {
+              background-color: #D6DBF5;
+              border-color: transparent;
+
+              &:hover {
+                background-color: #c4cbee;
+              }
+            }
+  
+            &.correct-answer {
+              background-color: #8bd19a;
+              border-color: transparent;
+              transition: all .3s;
+              
+              &:hover {
+                background-color: #bdebc7;
+                cursor: not-allowed;
+              }
+            }
+  
+            &.incorrect-answer {
+              background-color: #F8BCBC;
+              border-color: transparent;
+              opacity: .7;
+              transition: all .3s;
+
+              &:hover {
+                background-color: #e99b9b;
+                cursor: not-allowed;
+              }
+            }
+          }
+        }
+  
+        &:last-of-type {
+          border-block-end: none;
+        }
+      }
+  
+      .check-answers-btn {
+        background-color: #4D5B9E;
+        display: block;
+        color: #f0f7ff;
+        border: none;
+        padding: 1.3em 4em;
+        margin: 3em auto;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+          background-color: #6270b3;
+          color: white;
+        }
+  
+        &::after {
+          content: "";
+          position: absolute;
+          top: -170px;
+          right: -250px;
+          background-color: #FFFAD1;
+          height: 400px;
+          width: 430px;
+          border-radius: 20% 80% 26% 74% / 0% 0% 100% 100%;
+          z-index: -1;
+        }
+      }
+  
+      &::after {
+        content: "";
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        background-color: #DEEBF8;
+        bottom: -150px;
+        left: -150px;
+        border-radius: 42% 58% 26% 74% / 24% 67% 33% 76%;
+        z-index: -1;
+      }
+    }
+    
+  }
+}
