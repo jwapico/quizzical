@@ -135,13 +135,25 @@ body {
             }
   
             &.incorrect-answer {
-              background-color: #F8BCBC;
+              background-color: #f3bfb2;
               border-color: transparent;
-              opacity: .7;
+              opacity: .8;
               transition: all .3s;
 
               &:hover {
                 background-color: #e99b9b;
+                cursor: not-allowed;
+              }
+            }
+
+            &.incorrect-correct-answer {
+              background-color: #b8eec4;
+              color: #575e88;
+              border-color: transparent;
+              transition: all .3s;
+              
+              &:hover {
+                background-color: #b2e0bc;
                 cursor: not-allowed;
               }
             }
@@ -153,16 +165,30 @@ body {
         }
       }
   
+      .play-again-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          font-size: 20px;
+          font-weight: 600;
+          margin-left: auto;
+          margin-right: -5em;
+        }
+        
+      }
+      
       .check-answers-btn {
         background-color: #4D5B9E;
         display: block;
         color: #f0f7ff;
         border: none;
         padding: 1.3em 4em;
-        margin: 3em auto;
         border-radius: 15px;
         cursor: pointer;
         transition: all .3s;
+        margin: 3em auto;
 
         &:hover {
           background-color: #6270b3;

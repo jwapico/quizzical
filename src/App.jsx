@@ -9,10 +9,13 @@ export default function App() {
     setStarted(true)
   }
 
+  function endQuiz() {
+    setStarted(false)
+  }
   return ( 
     <div>
       {!started && <StartScreen onStart={startQuiz}/>}
-      {started && <QuizScreen />}
+      {started && <QuizScreen onEnd={endQuiz} isStarted={started}/>}
     </div>
   );
 }
